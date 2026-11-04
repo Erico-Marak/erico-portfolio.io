@@ -142,12 +142,6 @@
   .hero__photo{
     width:100%; max-width:330px; aspect-ratio:3/4; object-fit:cover; border-radius:2px; display:block;
   }
-  .hero__id{
-    font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.1em;
-    color:var(--navy-deep); background:var(--navy-tint);
-    display:inline-flex; gap:8px; padding:5px 10px; border-radius:3px;
-    border:1px solid rgba(27,42,77,0.16); margin-bottom:20px; font-weight:600;
-  }
   .hero__greeting{
     font-family:var(--font-mono); font-size:0.92rem; color:var(--slate);
     letter-spacing:0.02em; margin-bottom:6px;
@@ -181,7 +175,7 @@
   }
   .ticker__inner{
     max-width:var(--maxw); margin:0 auto; padding:0 32px;
-    display:grid; grid-template-columns:repeat(2,1fr);
+    display:grid; grid-template-columns:1fr;
   }
   .ticker__item{
     padding:26px 22px; border-left:1px solid rgba(255,255,255,0.14);
@@ -374,44 +368,6 @@
   }
 
 
-  /* ===== INTERNSHIP CERTIFICATES ===== */
-  .intern-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:28px;
-  }
-  .intern-card{
-    border:1px solid var(--rule); border-radius:8px; padding:30px 28px; background:#fff;
-    display:flex; flex-direction:column;
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .intern-card:hover{ box-shadow:0 10px 28px rgba(16,26,48,0.1); transform:translateY(-3px); }
-  .intern-card__cat{
-    font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--brass); font-weight:600;
-  }
-  .intern-card__title{
-    font-family:var(--font-display); font-size:1.28rem; font-weight:500; color:var(--ink);
-    margin-top:8px; line-height:1.25;
-  }
-  .intern-card__issuer{ font-size:0.92rem; color:var(--slate); margin-top:8px; font-weight:500; }
-  .intern-card__date{
-    font-family:var(--font-mono); font-size:0.78rem; color:var(--navy); font-weight:600;
-    letter-spacing:0.03em; margin-top:6px;
-  }
-  .intern-card__desc{ font-size:0.94rem; color:var(--ink-soft); margin-top:16px; }
-  .intern-card__action{ margin-top:auto; padding-top:22px; }
-  .intern-card__link{
-    font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.04em;
-    display:inline-flex; align-items:center; gap:7px;
-    border:1px solid var(--rule); padding:8px 14px; border-radius:999px; color:var(--navy);
-    font-weight:500; transition:border-color .2s ease, background .2s ease;
-  }
-  .intern-card__link:hover{ border-color:var(--navy); background:var(--navy-tint); }
-  .intern-card__link svg{ width:13px; height:13px; flex-shrink:0; }
-  @media (max-width:760px){
-    .intern-grid{ grid-template-columns:1fr; }
-    .intern-card{ padding:26px 22px; }
-  }
-
   /* ===== SKILLS ===== */
   .skills-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; }
 
@@ -463,7 +419,6 @@
     <ul class="nav__links" id="navLinks">
       <li><a href="#education" data-nav>EDU</a></li>
       <li><a href="#experience" data-nav>EXP</a></li>
-      <li><a href="#internships" data-nav>INT</a></li>
       <li><a href="#projects" data-nav>PRJ</a></li>
       <li><a href="#leadership" data-nav>POR</a></li>
       <li><a href="#certifications" data-nav>CERT</a></li>
@@ -479,7 +434,6 @@
     <div class="hero__diag" aria-hidden="true"></div>
     <div class="hero__split">
       <div class="hero__panel hero__panel--text">
-        <span class="hero__id">NITM · B23CS013 · CSE’27</span>
         <p class="hero__greeting">Hi, I am</p>
         <h1 class="hero__name">Erico N Marak</h1>
         <p class="hero__role">Final-year B.Tech Computer Science &amp; Engineering student at NIT Meghalaya, graduating in 2027.</p>
@@ -494,10 +448,6 @@
   <!-- Signature stat strip -->
   <div class="ticker">
     <div class="ticker__inner">
-      <div class="ticker__item">
-        <div class="ticker__num"><span>200+</span></div>
-        <div class="ticker__label">Students in campus Gemini sessions</div>
-      </div>
       <div class="ticker__item">
         <div class="ticker__num">23<span>→</span>27</div>
         <div class="ticker__label">B.Tech CSE, NIT Meghalaya</div>
@@ -600,49 +550,11 @@
   </div>
 </section>
 
-<!-- ===== INTERNSHIP CERTIFICATES ===== -->
-<section class="section section--bordered" id="internships">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">INT — 03</span>
-      <h2 class="section-title">Internship Certificates</h2>
-    </div>
-    <div class="intern-grid reveal">
-      <article class="intern-card">
-        <div class="intern-card__cat">Certificate</div>
-        <h3 class="intern-card__title">30-Days Summer Internship Program</h3>
-        <div class="intern-card__issuer">Technology Innovation Hub, IIT Guwahati TIDF</div>
-        <div class="intern-card__date">AUG 2026 – SEP 2026</div>
-        <p class="intern-card__desc">Certificate of Completion for the project IoT Based Vehicle Telematics System for Driving Risk Assessment in Usage Based Insurance (IITG/TIDF/SI2026/139).</p>
-        <div class="intern-card__action">
-          <a class="intern-card__link" href="certificates/IIT_Guwahati_TIH_Summer_Internship_Certificate.pdf" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
-            View certificate
-          </a>
-        </div>
-      </article>
-      <article class="intern-card">
-        <div class="intern-card__cat">Certificate</div>
-        <h3 class="intern-card__title">Equity Research Internship</h3>
-        <div class="intern-card__issuer">Millennium Money Finance</div>
-        <div class="intern-card__date">13 JUL 2026 – 13 AUG 2026</div>
-        <p class="intern-card__desc">Certificate of Internship Completion covering demat account opening, DuPont analysis and technical analysis.</p>
-        <div class="intern-card__action">
-          <a class="intern-card__link" href="certificates/Millennium_Money_Equity_Research_Internship_Certificate.pdf" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
-            View certificate
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ===== PROJECTS ===== -->
 <section class="section section--bordered" id="projects">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">PRJ — 04</span>
+      <span class="eyebrow">PRJ — 03</span>
       <h2 class="section-title">Projects</h2>
     </div>
 
@@ -755,7 +667,7 @@
 <section class="section section--bordered" id="leadership">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">POR — 05</span>
+      <span class="eyebrow">POR — 04</span>
       <h2 class="section-title">Leadership &amp; Responsibility</h2>
     </div>
         <div class="timeline reveal">
@@ -811,7 +723,7 @@
 <section class="section section--bordered" id="certifications">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">CERT — 06</span>
+      <span class="eyebrow">CERT — 05</span>
       <h2 class="section-title">Certifications &amp; Achievements</h2>
     </div>
 
@@ -832,7 +744,11 @@
         <div class="ach-card__body">
           <div class="ach-card__cat">Professional</div>
           <div class="ach-card__title">Google Project Management Professional Certificate</div>
-          <div class="ach-card__meta">Coursera · 2026</div>
+          <div class="ach-card__meta">Coursera · Apr 2026</div>
+          <a class="tl-item__proof" href="certificates/Google_Project_Management_Professional_Certificate.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
+            View certificate
+          </a>
         </div>
       </article>
 
@@ -913,7 +829,7 @@
 <section class="section section--bordered" id="skills">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">SKILLS — 07</span>
+      <span class="eyebrow">SKILLS — 06</span>
       <h2 class="section-title">Skills &amp; Interests</h2>
     </div>
     <div class="skills-grid reveal">
